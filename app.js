@@ -12,6 +12,9 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
+app.post('/submit', function(req, res) {
+	
+});
 
 app.get('/', function(req, res) {
 	res.render('home');
